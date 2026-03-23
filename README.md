@@ -1,4 +1,4 @@
-# cdp-perf-test-suite-template
+# fcp-cv-frontend-performance-test
 
 A JMeter based test runner for the CDP Platform.
 

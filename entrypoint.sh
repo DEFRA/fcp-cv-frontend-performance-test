@@ -14,7 +14,7 @@ JM_REPORTS=${JM_HOME}/reports
 JM_LOGS=${JM_HOME}/logs
 
 # Get an auth token
-auth_url=https://login.microsoftonline.com/${TENANT_ID:?required secret not set!}/oauth2/v2.0/token
+#auth_url=https://login.microsoftonline.com/${TENANT_ID:?required secret not set!}/oauth2/v2.0/token
 #client_auth=`echo -n "${CLIENT_ID:?required secret not set!}:${CLIENT_SECRET:?required secret not set!}" | base64  | tr -d '\n'`
 
 #content=`curl -s \
@@ -47,7 +47,7 @@ LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Before running the suite, replace 'service-name' with the name/url of the service to test.
 # ENVIRONMENT is set to the name of th environment the test is running in.
-SERVICE_ENDPOINT=${SERVICE_ENDPOINT:-service-name.${ENVIRONMENT}.cdp-int.defra.cloud}
+SERVICE_ENDPOINT=${SERVICE_ENDPOINT:-fcp-cv-frontend.${ENVIRONMENT}.cdp-int.defra.cloud}
 # PORT is used to set the port of this performance test container
 SERVICE_PORT=${SERVICE_PORT:-443}
 SERVICE_URL_SCHEME=${SERVICE_URL_SCHEME:-https}

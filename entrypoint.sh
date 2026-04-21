@@ -55,11 +55,11 @@ SERVICE_URL_SCHEME=${SERVICE_URL_SCHEME:-https}
 # Run the test suite
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f \
 -Jenv="${ENVIRONMENT}" \
-#-JauthToken="${auth_token}" \
-#-JidentityToken="${identity_token}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
 -Jprotocol="${SERVICE_URL_SCHEME}"
+#-JauthToken="${auth_token}" \
+#-JidentityToken="${identity_token}" \
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then

@@ -52,12 +52,20 @@ SERVICE_ENDPOINT=${SERVICE_ENDPOINT:-fcp-cv-frontend.${ENVIRONMENT}.cdp-int.defr
 SERVICE_PORT=${SERVICE_PORT:-443}
 SERVICE_URL_SCHEME=${SERVICE_URL_SCHEME:-https}
 
+# Create file paths for environments
+test_data_file_path="data/${ENVIRONMENT}/jmeter.config.testdata.csv"
+test_paireddata_file_path="data/${ENVIRONMENT}/jmeter.config.pairedtestdata.csv"
+land_data_file_path="data/${ENVIRONMENT}/jmeter.config.landdata.csv"
+
 # Run the test suite
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f \
 -Jenv="${ENVIRONMENT}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}"
+-Jprotocol="${SERVICE_URL_SCHEME}" \
+-JtestPairedDataFilePath="${test_paireddata_file_path}" \
+-JlandDataFilePath="${land_data_file_path}" \
+-JtestDataFilePath="${test_data_file_path}"
 #-JauthToken="${auth_token}" \
 #-JidentityToken="${identity_token}" \
 

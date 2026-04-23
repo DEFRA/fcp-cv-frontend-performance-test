@@ -41,7 +41,7 @@
         <boolProp name="CacheManager.controlledByThread">false</boolProp>
       </CacheManager>
       <hashTree/>
-      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Land data - CSV Data Set Config">
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Land data - CSV Data Set Config" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding">UTF-8</stringProp>
         <stringProp name="filename">${__P(landDataFilePath)}</stringProp>
@@ -96,7 +96,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/land-details?sbi=1111111111&amp;date=2026-02-16&amp;sheetId=SS6627&amp;parcelId=5662">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/land-details?sbi=1111111111&amp;date=2026-02-16&amp;sheetId=SS6627&amp;parcelId=5662" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -118,7 +118,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name=":authority" elementType="Header">
                 <stringProp name="Header.name">:authority</stringProp>
@@ -389,7 +389,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Linked Contacts">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Linked Contacts" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -407,7 +407,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/linked-contacts?sbi=1111111111">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/linked-contacts?sbi=1111111111" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -503,7 +503,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/linked-contacts/list/1111111111">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/linked-contacts/list/1111111111" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -596,7 +596,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Linked Businesses">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Linked Businesses" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -614,7 +614,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/linked-businesses?crn=1111112200">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/linked-businesses?crn=1111112200" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -710,7 +710,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/linked-businesses/list/1111112200">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/linked-businesses/list/1111112200" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -803,7 +803,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CPH">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="CPH" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -821,7 +821,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/county-parish-holdings?sbi=333333333">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/county-parish-holdings?sbi=333333333" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -909,7 +909,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/county-parish-holdings/3333333333 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/county-parish-holdings/3333333333 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1002,7 +1002,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Authentication">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Authentication" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -1020,7 +1020,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/authenticate?crn=9000001400">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/authenticate?crn=9000001400" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1116,7 +1116,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/authenticate/9000001400">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/authenticate/9000001400" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1209,7 +1209,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Agreements">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Agreements" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -1357,7 +1357,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
             <collectionProp name="HeaderManager.headers">
               <elementProp name=":authority" elementType="Header">
                 <stringProp name="Header.name">:authority</stringProp>
@@ -1454,7 +1454,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/applications?sbi=2222222222 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/applications?sbi=2222222222 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1663,7 +1663,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Business Messages">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Business Messages" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -1681,7 +1681,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/business-messages?sbi=2222222222 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/business-messages?sbi=2222222222 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1789,7 +1789,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/business-messages/contacts/2222222222 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/business-messages/contacts/2222222222 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1890,7 +1890,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payments">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payments" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -1908,7 +1908,7 @@
           <stringProp name="throughput">${__P(threadThroughput,10)}</stringProp>
         </ConstantThroughputTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="payments?sbi=222222222">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="payments?sbi=222222222" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2016,7 +2016,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/payments/222222222">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/payments/222222222" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>

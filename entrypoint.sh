@@ -58,7 +58,7 @@ test_paireddata_file_path="data/${ENVIRONMENT}/jmeter.config.pairedtestdata.csv"
 land_data_file_path="data/${ENVIRONMENT}/jmeter.config.landdata.csv"
 
 # Run the test suite
-jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f \
+jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -q user.properties -o ${JM_REPORTS} -j ${LOGFILE} -f \
 -Jenv="${ENVIRONMENT}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \

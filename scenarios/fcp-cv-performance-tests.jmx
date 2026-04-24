@@ -909,7 +909,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/county-parish-holdings/3333333333 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/county-parish-holdings/3333333333 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1335,7 +1335,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/agreements/1111111111 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/agreements/1111111111 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1562,7 +1562,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="api/dal/applications/2222222222 ">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="api/dal/applications/2222222222 " enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1789,7 +1789,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/business-messages/contacts/2222222222 " enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/business-messages/contacts/2222222222 ">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1889,8 +1889,108 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/business-messages/messages/2222222222/2222223000?fromDate=2025-04-23">
+          <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.port">0</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">api/dal/business-messages/messages/${psbi}/${pcrn}?fromDate=2025-04-23</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="_rsc" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.name">_rsc</stringProp>
+                <stringProp name="Argument.value">p37cr</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name=":authority" elementType="Header">
+                <stringProp name="Header.name">:authority</stringProp>
+                <stringProp name="Header.value">fcp-cv-frontend.dev.cdp-int.defra.cloud</stringProp>
+              </elementProp>
+              <elementProp name=":method" elementType="Header">
+                <stringProp name="Header.name">:method</stringProp>
+                <stringProp name="Header.value">GET</stringProp>
+              </elementProp>
+              <elementProp name=":path" elementType="Header">
+                <stringProp name="Header.name">:path</stringProp>
+                <stringProp name="Header.value">/api/dal/business-messages/contacts/2222222222</stringProp>
+              </elementProp>
+              <elementProp name=":scheme" elementType="Header">
+                <stringProp name="Header.name">:scheme</stringProp>
+                <stringProp name="Header.value">https</stringProp>
+              </elementProp>
+              <elementProp name="accept" elementType="Header">
+                <stringProp name="Header.name">accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="accept-encoding" elementType="Header">
+                <stringProp name="Header.name">accept-encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
+              </elementProp>
+              <elementProp name="accept-language" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">en-GB,en-US;q=0.9,en;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="priority" elementType="Header">
+                <stringProp name="Header.name">priority</stringProp>
+                <stringProp name="Header.value">u=1, i</stringProp>
+              </elementProp>
+              <elementProp name="referer" elementType="Header">
+                <stringProp name="Header.name">referer</stringProp>
+                <stringProp name="Header.value">https://fcp-cv-frontend.dev.cdp-int.defra.cloud/business-messages?sbi=2222222222 </stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua</stringProp>
+                <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;146&quot;, &quot;Not-A.Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;146&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                <stringProp name="Header.value">?0</stringProp>
+              </elementProp>
+              <elementProp name="sec-ch-ua-platform" elementType="Header">
+                <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                <stringProp name="Header.value">&quot;macOS&quot;</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-dest" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-mode" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="sec-fetch-site" elementType="Header">
+                <stringProp name="Header.name">sec-fetch-site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="user-agent" elementType="Header">
+                <stringProp name="Header.name">user-agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36</stringProp>
+              </elementProp>
+              <elementProp name="x-msal-access-token" elementType="Header">
+                <stringProp name="Header.name">x-msal-access-token</stringProp>
+                <stringProp name="Header.value">${__P(authToken)}</stringProp>
+              </elementProp>
+              <elementProp name="x-msal-id-token" elementType="Header">
+                <stringProp name="Header.name">x-msal-id-token</stringProp>
+                <stringProp name="Header.value">${__P(identityToken)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payments" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Payments">
         <stringProp name="ThreadGroup.num_threads">${__P(threadCount,10)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(rampUp,10)}</stringProp>
         <stringProp name="ThreadGroup.duration">${__P(testTimeInSeconds,10)}</stringProp>
@@ -2016,7 +2116,7 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/payments/222222222">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/dal/payments/222222222" enabled="true">
           <stringProp name="HTTPSampler.domain">fcp-cv-frontend.${__P(env)}.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.port">0</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
